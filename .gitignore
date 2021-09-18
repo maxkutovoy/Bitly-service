@@ -105,4 +105,3 @@ myenv/
 
 # mypy
 .mypy_cache/
-.env
