@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
 def shorten_link(token, long_link):
     if not urlparse(long_link).scheme:
         long_link = f"http://{long_link}"
@@ -54,16 +55,17 @@ def is_bitlink(token, verified_link):
 
 def input_link():
     parser = argparse.ArgumentParser(
-        description="Сокращаем длинню ссылку или" \
+        description="Сокращаем длинную ссылку или"
                     "выводим количество переходов для короткой"
     )
     parser.add_argument(
         "link",
-        help="Введите длинную ссылку дял получения битлинка" \
-             "или короткую для просморта количества переходов"
+        help="Введите длинную ссылку для получения битлинка"
+             "или короткую для просмотра количества переходов"
     )
     args = parser.parse_args()
     return args.link
+
 
 def main():
     bitly_token = os.getenv("BITLY_TOKEN")
