@@ -71,7 +71,8 @@ def main():
 
     bitly_token = os.getenv("BITLY_TOKEN")
     user_link = input_link()
-    bitlink = f"{urlparse(user_link).netloc}{urlparse(user_link).path}"
+    pasrsed_link = urlparse(user_link)
+    bitlink = f"{pasrsed_link.netloc}{pasrsed_link.path}"
 
     try:
         if is_bitlink(bitly_token, bitlink):
