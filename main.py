@@ -5,8 +5,6 @@ from urllib.parse import urlparse
 import requests
 from dotenv import load_dotenv
 
-load_dotenv()
-
 
 def shorten_link(token, long_link):
     if not urlparse(long_link).scheme:
@@ -69,6 +67,8 @@ def input_link():
 
 
 def main():
+    load_dotenv()
+
     bitly_token = os.getenv("BITLY_TOKEN")
     user_link = input_link()
     bitlink = f"{urlparse(user_link).netloc}{urlparse(user_link).path}"
