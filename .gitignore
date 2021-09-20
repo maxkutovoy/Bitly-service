@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #IDE
 .idea/
 .vscode/
@@ -111,6 +112,9 @@ myenv/
 # mypy
 .mypy_cache/
 
+=======
+.env
+>>>>>>> parent of f7107ac (Написал Readme и gitignore)
 =======
 .env
 >>>>>>> parent of f7107ac (Написал Readme и gitignore)
